@@ -5,7 +5,6 @@ class RingBuffer:
         '''
         Create an empty ring buffer, with given max capacity
         '''
-        # TO-DO: implement this
         self.MAX_CAP = capacity
         self.buffer = [None] * self.MAX_CAP
         self._front = 0
@@ -16,28 +15,24 @@ class RingBuffer:
         '''
         Return number of items currently in the buffer
         '''
-        # TO-DO: implement this
         return self.counter
 
     def is_empty(self) -> bool:
         '''
         Is the buffer empty (size equals zero)?
         '''
-        # TO-DO: implement this
         return self.size() == 0
         
     def is_full(self) -> bool:
         '''
         Is the buffer full (size equals capacity)?
         '''
-        # TO-DO: implement this
         return self.size() == self.MAX_CAP
 
     def enqueue(self, x: float):
         '''
         Add item `x` to the end
         '''
-        # TO-DO: implement this
         if self.is_full():
             raise RingBufferFull()
         
@@ -50,7 +45,6 @@ class RingBuffer:
         '''
         Return and remove item from the front
         '''
-        # TO-DO: implement this
         if self.is_empty():
             raise RingBufferEmpty()
           
@@ -64,7 +58,6 @@ class RingBuffer:
         '''
         Return (but do not delete) item from the front
         '''
-        # TO-DO: implement this
         if(self.is_empty()):
             raise RingBufferEmpty()
         return self.buffer[self._front]
