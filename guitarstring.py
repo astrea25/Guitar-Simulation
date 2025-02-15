@@ -8,9 +8,8 @@ class GuitarString:
         '''
         Create a guitar string of the given frequency, using a sampling rate of 44100 Hz
         '''
-        # TO-DO: implement this
-        self.capacity =  math.ceil(44100 / frequency)# TO-DO: compute the max capacity of the ring buffer based on the frequency
-        self.buffer =  RingBuffer(self.capacity) # TO-DO: construct the ring buffer object
+        self.capacity =  math.ceil(44100 / frequency)
+        self.buffer =  RingBuffer(self.capacity)
         for i in range(self.capacity):
             self.buffer.enqueue(0.00)
         self.ticks = 0
@@ -38,7 +37,6 @@ class GuitarString:
         '''
         Set the buffer to white noise
         '''
-        # TO-DO: implement this
         size = self.buffer.size()
 
         for i in range(size):
@@ -51,7 +49,6 @@ class GuitarString:
         '''
         Advance the simulation one time step by applying the Karplus--Strong update
         '''
-        # TO-DO: implement this
         ENERGY_DECAY = 0.996
 
         if self.buffer.size() > 0:
@@ -65,12 +62,10 @@ class GuitarString:
         '''
         Return the current sample
         '''
-        # TO-DO: implement this
         return self.buffer.peek()
 
     def time(self) -> int:
         '''
         Return the number of ticks so far
         '''
-        # TO-DO: implement this
         return self.ticks
