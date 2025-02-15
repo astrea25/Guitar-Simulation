@@ -11,10 +11,8 @@ A Python-based guitar string simulation that produces realistic string vibration
 
 ## Requirements
 
-- Python 3.x
-- NumPy
-- Sounddevice
-- SciPy
+- numpy
+- pygame
 
 ## Installation
 
